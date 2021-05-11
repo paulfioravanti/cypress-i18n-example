@@ -1,12 +1,12 @@
 {
   "name": "cypress-i18n-example",
   "version": "1.0.0",
-  "description": "",
+  "description": "Cypress Testing for Elixir and Elm i18n applications",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "cypress:open": "cypress open"
   },
-  "author": "",
+  "author": "Paul Fioravanti",
   "license": "ISC",
   "dependencies": {
     "cypress": "^7.3.0"

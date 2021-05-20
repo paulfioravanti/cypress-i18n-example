@@ -1,7 +1,9 @@
 {
   "nodeVersion": "system",
-  "elmAppUrl": "http://localhost:3000",
-  "elmLanguageKey": "elm-i18n-example-language",
-  "phxAppUrl": "http://localhost:4000",
-  "phxLanguageKey": "phxi18nexamplelanguage"
+  "env": {
+    "elmAppUrl": "http://localhost:3000",
+    "elmLanguageKey": "elm-i18n-example-language",
+    "phxAppUrl": "http://localhost:4000",
+    "phxLanguageKey": "phxi18nexamplelanguage"
+  }
 }

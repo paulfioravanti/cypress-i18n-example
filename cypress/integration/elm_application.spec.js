@@ -11,8 +11,8 @@ import {
 } from "../support/constants"
 
 describe("Elm i18n application", () => {
-  const LANGUAGE_KEY = Cypress.config("elmLanguageKey")
-  const URL = Cypress.config("elmAppUrl")
+  const LANGUAGE_KEY = Cypress.env("elmLanguageKey")
+  const URL = Cypress.env("elmAppUrl")
 
   beforeEach(() => {
     cy.visit(URL)

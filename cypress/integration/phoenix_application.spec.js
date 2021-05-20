@@ -11,8 +11,8 @@ import {
 } from "../support/constants"
 
 describe("Phoenix i18n application", () => {
-  const LANGUAGE_KEY = Cypress.config("phxLanguageKey")
-  const URL = Cypress.config("phxAppUrl")
+  const LANGUAGE_KEY = Cypress.env("phxLanguageKey")
+  const URL = Cypress.env("phxAppUrl")
 
   beforeEach(() => {
     cy.visit(URL)

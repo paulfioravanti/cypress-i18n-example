@@ -44,6 +44,16 @@ Cypress.env("APPLICATIONS").forEach(({ name, url }) => {
           cy.get("ul").not("be.visible")
         })
       })
+
+      context("by changing language", () => {
+        beforeEach(() => {
+          cy.clickJapanese()
+        })
+
+        it("becomes invisible", () => {
+          cy.get("ul").not("be.visible")
+        })
+      })
     })
   })
 })

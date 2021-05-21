@@ -4,21 +4,21 @@ import {
   JAPANESE_MENU_LABEL,
 } from "./constants"
 
-cy.clickEnglish = () => {
+Cypress.Commands.add("clickEnglish", () => {
   clickMenuLabel(ENGLISH_MENU_LABEL)
-}
+})
 
-cy.clickItalian = () => {
+Cypress.Commands.add("clickItalian", () => {
   clickMenuLabel(ITALIAN_MENU_LABEL)
-}
+})
 
-cy.clickJapanese = () => {
+Cypress.Commands.add("clickJapanese", () => {
   clickMenuLabel(JAPANESE_MENU_LABEL)
-}
+})
 
-cy.clickLanguageMenu = () => {
+Cypress.Commands.add("clickLanguageMenu", () => {
   cy.get("p").click()
-}
+})
 
 function clickMenuLabel(label) {
   cy.get("li").contains(label).click()

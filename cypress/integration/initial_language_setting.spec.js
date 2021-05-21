@@ -1,12 +1,16 @@
 Cypress.env("APPLICATIONS").forEach(({ name, url }) => {
   describe(`${name}: initial language setting`, () => {
+    const ENGLISH_LANGUAGE = Cypress.env("ENGLISH_LANGUAGE")
+    const ITALIAN_LANGUAGE = Cypress.env("ITALIAN_LANGUAGE")
+    const JAPANESE_LANGUAGE = Cypress.env("JAPANESE_LANGUAGE")
+
     beforeEach(() => {
       cy.visit(url)
     })
 
     context("when set to English", () => {
       before(() => {
-        cy.storeLanguage(url, "en")
+        cy.storeLanguage(url, ENGLISH_LANGUAGE)
       })
 
       it("displays English", () => {
@@ -16,7 +20,7 @@ Cypress.env("APPLICATIONS").forEach(({ name, url }) => {
 
     context("when set to Italian", () => {
       before(() => {
-        cy.storeLanguage(url, "it")
+        cy.storeLanguage(url, ITALIAN_LANGUAGE)
       })
 
       it("displays Italian", () => {
@@ -26,7 +30,7 @@ Cypress.env("APPLICATIONS").forEach(({ name, url }) => {
 
     context("when set to Japanese", () => {
       before(() => {
-        cy.storeLanguage(url, "ja")
+        cy.storeLanguage(url, JAPANESE_LANGUAGE)
       })
 
       it("displays Japanese", () => {

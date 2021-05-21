@@ -24,3 +24,12 @@ import './commands/language_storage.js'
 
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
+
+// NOTE: Sometimes, there seems to be unhandled exceptions thrown for what look
+// like no reason. When that happens, this function can be helpful.
+// REF: https://docs.cypress.io/api/events/catalog-of-events#Uncaught-Exceptions
+// Cypress.on('uncaught:exception', (err, runnable) => {
+//   // returning false here prevents Cypress from
+//   // failing the test
+//   return false
+// })

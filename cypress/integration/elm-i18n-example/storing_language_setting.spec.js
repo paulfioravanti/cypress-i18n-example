@@ -1,6 +1,7 @@
 describe("elm-18n-example: storing language setting", () => {
-  const STORAGE_KEY = Cypress.env("ELM_STORAGE_KEY")
   const APP_URL = Cypress.env("ELM_APP_URL")
+  const STORAGE_KEY = Cypress.env("ELM_STORAGE_KEY")
+  const JAPANESE_LANGUAGE = Cypress.env("JAPANESE_LANGUAGE")
 
   beforeEach(() => {
     cy.visit(APP_URL)
@@ -32,7 +33,7 @@ describe("elm-18n-example: storing language setting", () => {
   context("when changing to English and reloading the page", () => {
     before(() => {
       // Start in a non-English language.
-      localStorage.setItem(STORAGE_KEY, "ja")
+      localStorage.setItem(STORAGE_KEY, JAPANESE_LANGUAGE)
     })
 
     beforeEach(() => {

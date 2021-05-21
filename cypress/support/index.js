@@ -15,12 +15,6 @@
 
 // Import commands.js using ES2015 syntax:
 import './commands'
-<<<<<<< HEAD
-=======
-import './commands/language_display'
-import './commands/language_menu.js'
-import './commands/language_storage.js'
->>>>>>> 098e0e2 (Unify all tests)
 
 // Alternatively you can use CommonJS syntax:
 // require('./commands')

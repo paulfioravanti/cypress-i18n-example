@@ -16,6 +16,10 @@ cy.clickJapanese = () => {
   clickMenuLabel(JAPANESE_MENU_LABEL)
 }
 
+cy.clickLanguageMenu = () => {
+  cy.get("p").click()
+}
+
 function clickMenuLabel(label) {
   cy.get("li").contains(label).click()
 }

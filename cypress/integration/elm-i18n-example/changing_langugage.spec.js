@@ -4,7 +4,7 @@ describe("elm-i18n: changing language", () => {
 
   beforeEach(() => {
     cy.visit(APP_URL)
-    cy.get("p").click()
+    cy.clickLanguageMenu()
   })
 
   context("to Italian", () => {

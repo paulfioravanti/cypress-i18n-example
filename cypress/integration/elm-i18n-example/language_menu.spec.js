@@ -13,7 +13,7 @@ describe("elm-i18n: the language menu", () => {
 
   context("opening the menu", () => {
     beforeEach(() => {
-      cy.get("p").click()
+      cy.clickLanguageMenu()
     })
 
     it("becomes visible", () => {
@@ -23,12 +23,12 @@ describe("elm-i18n: the language menu", () => {
 
   context("closing the menu", () => {
     beforeEach(() => {
-      cy.get("p").click()
+      cy.clickLanguageMenu()
     })
 
     context("by clicking the open menu", () => {
       beforeEach(() => {
-        cy.get("p").click()
+        cy.clickLanguageMenu()
       })
 
       it("becomes invisible", () => {

@@ -4,7 +4,7 @@ describe("elm-18n: storing language setting", () => {
 
   beforeEach(() => {
     cy.visit(APP_URL)
-    cy.get("p").click()
+    cy.clickLanguageMenu()
   })
 
   context("when changing to Italian and reloading the page", () => {

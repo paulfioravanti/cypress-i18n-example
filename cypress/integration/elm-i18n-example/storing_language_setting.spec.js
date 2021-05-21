@@ -1,13 +1,7 @@
 import {
-  ENGLISH_BODY,
   ENGLISH_MENU_LABEL,
-  ENGLISH_TITLE_ELM,
-  ITALIAN_BODY,
   ITALIAN_MENU_LABEL,
-  ITALIAN_TITLE_ELM,
-  JAPANESE_BODY,
   JAPANESE_MENU_LABEL,
-  JAPANESE_TITLE_ELM,
 } from "../../support/constants"
 
 describe("elm-18n: storing language setting", () => {
@@ -26,8 +20,7 @@ describe("elm-18n: storing language setting", () => {
     })
 
     it("still displays Italian", () => {
-      cy.title().should("eq", ITALIAN_TITLE_ELM)
-      cy.get("h1").should("contain", ITALIAN_BODY)
+      cy.displaysItalian(APP_URL)
     })
   })
 
@@ -38,8 +31,7 @@ describe("elm-18n: storing language setting", () => {
     })
 
     it("still displays Japanese", () => {
-      cy.title().should("eq", JAPANESE_TITLE_ELM)
-      cy.get("h1").should("contain", JAPANESE_BODY)
+      cy.displaysJapanese(APP_URL)
     })
   })
 
@@ -55,8 +47,7 @@ describe("elm-18n: storing language setting", () => {
     })
 
     it("still displays English", () => {
-      cy.title().should("eq", ENGLISH_TITLE_ELM)
-      cy.get("h1").should("contain", ENGLISH_BODY)
+      cy.displaysEnglish(APP_URL)
     })
   })
 })

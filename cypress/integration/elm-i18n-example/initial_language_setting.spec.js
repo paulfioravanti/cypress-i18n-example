@@ -1,12 +1,3 @@
-import {
-  ENGLISH_BODY,
-  ENGLISH_TITLE_ELM,
-  ITALIAN_BODY,
-  ITALIAN_TITLE_ELM,
-  JAPANESE_BODY,
-  JAPANESE_TITLE_ELM,
-} from "../../support/constants"
-
 describe("elm-i18n: initial language setting", () => {
   const STORAGE_KEY = Cypress.env("ELM_STORAGE_KEY")
   const APP_URL = Cypress.env("ELM_APP_URL")
@@ -21,8 +12,7 @@ describe("elm-i18n: initial language setting", () => {
     })
 
     it("displays English", () => {
-      cy.title().should("eq", ENGLISH_TITLE_ELM)
-      cy.get("h1").should("contain", ENGLISH_BODY)
+      cy.displaysEnglish(APP_URL)
     })
   })
 
@@ -32,8 +22,7 @@ describe("elm-i18n: initial language setting", () => {
     })
 
     it("displays Italian", () => {
-      cy.title().should("eq", ITALIAN_TITLE_ELM)
-      cy.get("h1").should("contain", ITALIAN_BODY)
+      cy.displaysItalian(APP_URL)
     })
   })
 
@@ -43,15 +32,13 @@ describe("elm-i18n: initial language setting", () => {
     })
 
     it("displays Japanese", () => {
-      cy.title().should("eq", JAPANESE_TITLE_ELM)
-      cy.get("h1").should("contain", JAPANESE_BODY)
+      cy.displaysJapanese(APP_URL)
     })
   })
 
   context("when not set at all", () => {
     it("displays English", () => {
-      cy.title().should("eq", ENGLISH_TITLE_ELM)
-      cy.get("h1").should("contain", ENGLISH_BODY)
+      cy.displaysEnglish(APP_URL)
     })
   })
 })

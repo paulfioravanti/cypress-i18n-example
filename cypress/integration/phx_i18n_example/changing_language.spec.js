@@ -1,13 +1,7 @@
 import {
-  ENGLISH_BODY,
   ENGLISH_MENU_LABEL,
-  ENGLISH_TITLE_PHOENIX,
-  ITALIAN_BODY,
   ITALIAN_MENU_LABEL,
-  ITALIAN_TITLE_PHOENIX,
-  JAPANESE_BODY,
   JAPANESE_MENU_LABEL,
-  JAPANESE_TITLE_PHOENIX
 } from "../../support/constants"
 
 describe("phx-i18n: changing language", () => {
@@ -25,8 +19,7 @@ describe("phx-i18n: changing language", () => {
     })
 
     it("displays Italian", () => {
-      cy.title().should("eq", ITALIAN_TITLE_PHOENIX)
-      cy.get("h1").should("contain", ITALIAN_BODY)
+      cy.displaysItalian(APP_URL)
     })
   })
 
@@ -36,8 +29,7 @@ describe("phx-i18n: changing language", () => {
     })
 
     it("displays Japanese", () => {
-      cy.title().should("eq", JAPANESE_TITLE_PHOENIX)
-      cy.get("h1").should("contain", JAPANESE_BODY)
+      cy.displaysJapanese(APP_URL)
     })
   })
 
@@ -52,8 +44,7 @@ describe("phx-i18n: changing language", () => {
     })
 
     it("displays English", () => {
-      cy.title().should("eq", ENGLISH_TITLE_PHOENIX)
-      cy.get("h1").should("contain", ENGLISH_BODY)
+      cy.displaysEnglish(APP_URL)
     })
   })
 })

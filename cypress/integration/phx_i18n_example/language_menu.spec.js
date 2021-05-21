@@ -45,5 +45,15 @@ describe("phx_i18n_example: the language menu", () => {
         cy.get("ul").not("be.visible")
       })
     })
+
+    context("by changing language", () => {
+      beforeEach(() => {
+        cy.clickJapanese()
+      })
+
+      it("becomes invisible", () => {
+        cy.get("ul").not("be.visible")
+      })
+    })
   })
 })

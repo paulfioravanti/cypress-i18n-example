@@ -45,5 +45,15 @@ describe("elm-i18n-example: the language menu", () => {
         cy.get("ul").not("be.visible")
       })
     })
+
+    context("by changing language", () => {
+      beforeEach(() => {
+        cy.clickJapanese()
+      })
+
+      it("becomes invisible", () => {
+        cy.get("ul").not("be.visible")
+      })
+    })
   })
 })

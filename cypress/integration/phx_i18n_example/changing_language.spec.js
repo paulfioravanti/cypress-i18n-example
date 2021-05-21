@@ -1,9 +1,3 @@
-import {
-  ENGLISH_MENU_LABEL,
-  ITALIAN_MENU_LABEL,
-  JAPANESE_MENU_LABEL,
-} from "../../support/constants"
-
 describe("phx-i18n: changing language", () => {
   const STORAGE_KEY = Cypress.env("PHX_STORAGE_KEY")
   const APP_URL = Cypress.env("PHX_APP_URL")
@@ -15,7 +9,7 @@ describe("phx-i18n: changing language", () => {
 
   context("to Italian", () => {
     beforeEach(() => {
-      cy.get("li").contains(ITALIAN_MENU_LABEL).click()
+      cy.clickItalian()
     })
 
     it("displays Italian", () => {
@@ -25,7 +19,7 @@ describe("phx-i18n: changing language", () => {
 
   context("to Japanese", () => {
     beforeEach(() => {
-      cy.get("li").contains(JAPANESE_MENU_LABEL).click()
+      cy.clickJapanese()
     })
 
     it("displays Japanese", () => {
@@ -40,7 +34,7 @@ describe("phx-i18n: changing language", () => {
     })
 
     beforeEach(() => {
-      cy.get("li").contains(ENGLISH_MENU_LABEL).click()
+      cy.clickEnglish()
     })
 
     it("displays English", () => {

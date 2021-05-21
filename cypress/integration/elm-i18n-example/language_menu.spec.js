@@ -1,4 +1,4 @@
-describe("elm-i18n: the language menu", () => {
+describe("elm-i18n-example: the language menu", () => {
   const APP_URL = Cypress.env("ELM_APP_URL")
 
   beforeEach(() => {

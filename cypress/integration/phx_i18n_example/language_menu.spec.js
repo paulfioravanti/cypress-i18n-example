@@ -1,4 +1,4 @@
-describe("phx-i18n: the language menu", () => {
+describe("phx_i18n_example: the language menu", () => {
   const APP_URL = Cypress.env("PHX_APP_URL")
 
   beforeEach(() => {

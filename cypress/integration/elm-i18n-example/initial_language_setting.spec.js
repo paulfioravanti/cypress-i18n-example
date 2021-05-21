@@ -1,4 +1,4 @@
-describe("elm-i18n: initial language setting", () => {
+describe("elm-i18n-example: initial language setting", () => {
   const STORAGE_KEY = Cypress.env("ELM_STORAGE_KEY")
   const APP_URL = Cypress.env("ELM_APP_URL")
 

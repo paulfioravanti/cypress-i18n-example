@@ -1,4 +1,4 @@
-describe("phx-i18n: initial language setting", () => {
+describe("phx_i18n_example: initial language setting", () => {
   const STORAGE_KEY = Cypress.env("PHX_STORAGE_KEY")
   const APP_URL = Cypress.env("PHX_APP_URL")
 

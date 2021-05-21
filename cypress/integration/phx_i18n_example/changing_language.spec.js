@@ -1,6 +1,5 @@
 describe("phx_i18n_example: changing language", () => {
   const APP_URL = Cypress.env("PHX_APP_URL")
-  const STORAGE_KEY = Cypress.env("PHX_STORAGE_KEY")
   const JAPANESE_LANGUAGE = Cypress.env("JAPANESE_LANGUAGE")
 
   beforeEach(() => {
@@ -31,7 +30,7 @@ describe("phx_i18n_example: changing language", () => {
   context("to English", () => {
     before(() => {
       // Start in a non-English language.
-      cy.setCookie(STORAGE_KEY, JAPANESE_LANGUAGE)
+      cy.storeLanguage(APP_URL, JAPANESE_LANGUAGE)
     })
 
     beforeEach(() => {

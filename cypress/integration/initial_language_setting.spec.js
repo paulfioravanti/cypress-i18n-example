@@ -10,37 +10,37 @@ Cypress.env("APPLICATIONS").forEach(({ name, url }) => {
 
     context("when set to English", () => {
       before(() => {
-        cy.storeLanguage(url, ENGLISH_LANGUAGE)
+        cy.storeLanguage(name, ENGLISH_LANGUAGE)
       })
 
       it("displays English", () => {
-        cy.displaysEnglish(url)
+        cy.displaysEnglish(name)
       })
     })
 
     context("when set to Italian", () => {
       before(() => {
-        cy.storeLanguage(url, ITALIAN_LANGUAGE)
+        cy.storeLanguage(name, ITALIAN_LANGUAGE)
       })
 
       it("displays Italian", () => {
-        cy.displaysItalian(url)
+        cy.displaysItalian(name)
       })
     })
 
     context("when set to Japanese", () => {
       before(() => {
-        cy.storeLanguage(url, JAPANESE_LANGUAGE)
+        cy.storeLanguage(name, JAPANESE_LANGUAGE)
       })
 
       it("displays Japanese", () => {
-        cy.displaysJapanese(url)
+        cy.displaysJapanese(name)
       })
     })
 
     context("when not set at all", () => {
       it("displays English", () => {
-        cy.displaysEnglish(url)
+        cy.displaysEnglish(name)
       })
     })
   })

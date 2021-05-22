@@ -10,23 +10,23 @@ import {
   JAPANESE_TITLE_PHOENIX,
 } from "./constants"
 
-const ELM_APP_URL = Cypress.env("ELM_APP_URL")
+const ELM_APP_NAME = Cypress.env("ELM_APP_NAME")
 
-Cypress.Commands.add("displaysEnglish", appUrl => {
+Cypress.Commands.add("displaysEnglish", appName => {
   const title =
-    appUrl === ELM_APP_URL ? ENGLISH_TITLE_ELM : ENGLISH_TITLE_PHOENIX
+    appName === ELM_APP_NAME ? ENGLISH_TITLE_ELM : ENGLISH_TITLE_PHOENIX
   displays(title, ENGLISH_BODY)
 })
 
-Cypress.Commands.add("displaysItalian", appUrl => {
+Cypress.Commands.add("displaysItalian", appName => {
   const title =
-    appUrl === ELM_APP_URL ? ITALIAN_TITLE_ELM : ITALIAN_TITLE_PHOENIX
+    appName === ELM_APP_NAME ? ITALIAN_TITLE_ELM : ITALIAN_TITLE_PHOENIX
   displays(title, ITALIAN_BODY)
 })
 
-Cypress.Commands.add("displaysJapanese", appUrl => {
+Cypress.Commands.add("displaysJapanese", appName => {
   const title =
-    appUrl === ELM_APP_URL ? JAPANESE_TITLE_ELM : JAPANESE_TITLE_PHOENIX
+    appName === ELM_APP_NAME ? JAPANESE_TITLE_ELM : JAPANESE_TITLE_PHOENIX
   displays(title, JAPANESE_BODY)
 })
 

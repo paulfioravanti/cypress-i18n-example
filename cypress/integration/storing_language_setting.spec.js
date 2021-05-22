@@ -14,7 +14,7 @@ Cypress.env("APPLICATIONS").forEach(({ name, url }) => {
       })
 
       it("still displays Italian", () => {
-        cy.displaysItalian(url)
+        cy.displaysItalian(name)
       })
     })
 
@@ -25,14 +25,14 @@ Cypress.env("APPLICATIONS").forEach(({ name, url }) => {
       })
 
       it("still displays Japanese", () => {
-        cy.displaysJapanese(url)
+        cy.displaysJapanese(name)
       })
     })
 
     context("when changing to English and reloading the page", () => {
       before(() => {
         // Start in a non-English language.
-        cy.storeLanguage(url, JAPANESE_LANGUAGE)
+        cy.storeLanguage(name, JAPANESE_LANGUAGE)
       })
 
       beforeEach(() => {
@@ -41,7 +41,7 @@ Cypress.env("APPLICATIONS").forEach(({ name, url }) => {
       })
 
       it("still displays English", () => {
-        cy.displaysEnglish(url)
+        cy.displaysEnglish(name)
       })
     })
   })

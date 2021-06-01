@@ -1,7 +1,5 @@
 Cypress.env("APPLICATIONS").forEach(({ name, url }) => {
   describe(`${name}: changing language`, () => {
-    const JAPANESE_LANGUAGE = Cypress.env("JAPANESE_LANGUAGE")
-
     beforeEach(() => {
       cy.visit(url)
       cy.clickLanguageMenu()
@@ -28,6 +26,8 @@ Cypress.env("APPLICATIONS").forEach(({ name, url }) => {
     })
 
     context("to English", () => {
+      const JAPANESE_LANGUAGE = Cypress.env("JAPANESE_LANGUAGE")
+
       before(() => {
         // Start in a non-English language.
         cy.storeLanguage(name, JAPANESE_LANGUAGE)

@@ -8,7 +8,7 @@
   },
   "author": "Paul Fioravanti",
   "license": "ISC",
-  "dependencies": {
-    "cypress": "^7.3.0"
+  "devDependencies": {
+    "cypress": "^8.3.1"
   }
 }

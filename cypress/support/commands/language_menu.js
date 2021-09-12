@@ -5,7 +5,7 @@ import {
 } from "./constants"
 
 Cypress.Commands.add("clickLanguageMenu", () => {
-  cy.get("p").click()
+  cy.get("p").trigger("mouseover").click()
 })
 
 Cypress.Commands.add("clickEnglish", () => {
@@ -21,11 +21,5 @@ Cypress.Commands.add("clickJapanese", () => {
 })
 
 function clickMenuLabel(label) {
-  // NOTE: { force: true } added for the Phoenix application's sake. There
-  // would seem to be times during the "changing language" and "storing language
-  // setting" tests where the click to open the menu does not register or just
-  // gets lost, leading to the CSS of the dropdown menu still being set to
-  // display: none :(
-  // It would be great to be able to remove { force: true } in the future...
-  cy.get("li").contains(label).click({ force: true })
+  cy.get("li").contains(label).click()
 }

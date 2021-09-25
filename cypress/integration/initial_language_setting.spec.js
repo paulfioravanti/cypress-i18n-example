@@ -40,6 +40,16 @@ Cypress.env("APPLICATIONS").forEach(({ name, url }) => {
       })
     })
 
+    context("when set to an unknown language", () => {
+      before(() => {
+        cy.storeLanguage(name, "fr")
+      })
+
+      it("displays English", () => {
+        cy.displaysEnglish(name)
+      })
+    })
+
     context("when not set at all", () => {
       it("displays English", () => {
         cy.displaysEnglish(name)

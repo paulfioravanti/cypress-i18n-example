@@ -9,7 +9,7 @@ APPLICATIONS.forEach(({ name, url }) => {
     context("when changing to Italian and reloading the page", () => {
       beforeEach(() => {
         cy.clickItalian()
-        cy.reload(true)
+        cy.reload()
       })
 
       it("still displays Italian", () => {
@@ -20,7 +20,7 @@ APPLICATIONS.forEach(({ name, url }) => {
     context("when changing to Japanese and reloading the page", () => {
       beforeEach(() => {
         cy.clickJapanese()
-        cy.reload(true)
+        cy.reload()
       })
 
       it("still displays Japanese", () => {
@@ -36,7 +36,7 @@ APPLICATIONS.forEach(({ name, url }) => {
 
       beforeEach(() => {
         cy.clickEnglish()
-        cy.reload(true)
+        cy.reload()
       })
 
       it("still displays English", () => {

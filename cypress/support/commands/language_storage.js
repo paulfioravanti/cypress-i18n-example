@@ -1,6 +1,8 @@
-const ELM_APP_NAME = Cypress.env("ELM_APP_NAME")
-const ELM_STORAGE_KEY = Cypress.env("ELM_STORAGE_KEY")
-const PHX_STORAGE_KEY = Cypress.env("PHX_STORAGE_KEY")
+const {
+  ELM_APP_NAME,
+  ELM_STORAGE_KEY,
+  PHX_STORAGE_KEY
+} = Cypress.env()
 
 Cypress.Commands.add("storeLanguage", (appName, language) => {
   if (appName === ELM_APP_NAME) {

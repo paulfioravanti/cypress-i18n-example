@@ -1,4 +1,5 @@
 const { APPLICATIONS, JAPANESE_LANGUAGE } = Cypress.env()
+
 APPLICATIONS.forEach(({ name, url }) => {
   describe(`${name}: storing language setting`, () => {
     beforeEach(() => {

@@ -10,7 +10,7 @@ import {
   JAPANESE_TITLE_PHOENIX,
 } from "./constants"
 
-const ELM_APP_NAME = Cypress.env("ELM_APP_NAME")
+const [{ name: ELM_APP_NAME }] = Cypress.env("APPLICATIONS")
 
 Cypress.Commands.add("displaysEnglish", appName => {
   const title =

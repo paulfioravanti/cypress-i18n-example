@@ -15,6 +15,12 @@ Therefore, the idea is that a single set of Cypress tests should be able to test
 both of these applications, avoiding the need to write two separate test suites
 in the respective application languages.
 
+## Blog Post
+
+I wrote all about the creation of this test suite in the following blog post:
+
+- _[A Canvas of Cypress Tests][]_
+
 ## Setup
 
 ```sh
@@ -37,6 +43,7 @@ npm run cypress:open
 
 The Cypress application should automatically open, where the tests can be run.
 
+[A Canvas of Cypress Tests]: https://www.paulfioravanti.com/blog/canvas-of-cypress-tests/
 [Cypress]: https://www.cypress.io/
 [Cypress How it works]: https://www.cypress.io/how-it-works/
 [Elm]: https://elm-lang.org/
